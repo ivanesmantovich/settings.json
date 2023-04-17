@@ -1,0 +1,70 @@
+{
+    // Font
+    "editor.fontFamily": "SF Mono",
+    "editor.fontSize": 16, 
+
+    // Cursor
+    "editor.cursorStyle": "block",
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "block",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+
+    // Theme
+    "workbench.colorTheme": "Default Light+ Experimental",
+
+    // Vim (settings)
+    // For <space> leader key to work properly on Mac OS "Add full stop with double-space" needs to be disabled
+    "vim.leader": " ",
+    "vim.ignorecase": true,
+    "vim.hlsearch": true,
+
+    // Vim (auto switch input method)
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/Users/waterframe/.local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/Users/waterframe/.local/bin/im-select {im}",
+
+    // Vim (easymotion)
+    "vim.easymotion": true,
+    "vim.easymotionDimBackground": true,
+    "vim.easymotionMarkerFontWeight": "bold",
+    "vim.easymotionDimColor": "#ffffff",
+    "vim.easymotionMarkerForegroundColorOneChar": "#fb8500",
+    "vim.easymotionMarkerForegroundColorTwoCharFirst": "#fb8500",
+    "vim.easymotionMarkerForegroundColorTwoCharSecond": "#6449FF",
+    "vim.easymotionIncSearchForegroundColor": "#6449FF",
+
+    // Vim (surround)
+    // y s <motion>   <desired>	  Add desired surround around text defined by <motion>
+    // d s <existing>	          Delete existing surround
+    // c s <existing> <desired>	  Change existing surround to desired
+    // S   <desired>	          Surround when in visual modes (surrounds full selection)
+    // Use (, { to add spaces. Use ), } instead for no space.
+    // Also works with HTML tags.
+    "vim.surround": true,
+
+    // Vim (sneak)
+    // s <char><char>	            Move forward to the first occurrence of <char><char>
+    // S <char><char>	            Move backward to the first occurrence of <char><char>
+    // ; to go to the next occurence
+    // <operator> z <char><char>	Perform <operator> forward to the first occurrence of <char><char>
+    // <operator> Z <char><char>	Perform <operator> backward to the first occurrence of <char><char>
+    "vim.sneak": true,
+
+    // Vim (Camel case motion)
+    // DISABLED, thinking about it...
+    "vim.camelCaseMotion.enable": false,
+
+    "[python]": {
+        "editor.formatOnType": true
+    },
+
+    // UI
+    "window.titleBarStyle": "native",
+    "workbench.startupEditor": "none"
+}
