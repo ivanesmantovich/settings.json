@@ -2,6 +2,8 @@
     // Font
     "editor.fontFamily": "SF Mono",
     "editor.fontSize": 16, 
+    "terminal.integrated.fontFamily": "SF Mono",
+    "terminal.integrated.fontSize": 12,
 
     // Cursor
     "editor.cursorStyle": "block",
@@ -13,9 +15,6 @@
     "vim.cursorStylePerMode.visualline": "block",
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
-
-    // Theme
-    "workbench.colorTheme": "Default Light+ Experimental",
 
     // Vim (settings)
     // For <space> leader key to work properly on Mac OS "Add full stop with double-space" needs to be disabled
@@ -60,11 +59,71 @@
     // DISABLED, thinking about it...
     "vim.camelCaseMotion.enable": false,
 
+    "vim.normalModeKeyBindings": [
+        // Emacs-style line start, end
+        {
+            "before":["<C-a>"],
+            "commands": [
+                "cursorLineStart",
+            ]
+        },
+        {
+            "before":["<C-e>"],
+            "commands": [
+                "cursorLineEnd",
+            ]
+        }
+    ],
+
+    "vim.insertModeKeyBindings": [
+        // Emacs-style line start, end
+        {
+            "before":["<C-a>"],
+            "commands": [
+                "cursorLineStart",
+            ]
+        },
+        {
+            "before":["<C-e>"],
+            "commands": [
+                "cursorLineEnd",
+            ]
+        }
+    ],
+
+    "vim.visualModeKeyBindings": [
+        // Repeatable indenting
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+
     "[python]": {
         "editor.formatOnType": true
     },
 
     // UI
     "window.titleBarStyle": "native",
-    "workbench.startupEditor": "none"
+    "window.nativeTabs": true,
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.lineNumbers": "off",
+    "workbench.colorTheme": "GitHub Light",
+    "workbench.iconTheme": "chalice-icon-theme",
 }
