@@ -1,129 +1,58 @@
 {
-    // Font
-    "editor.fontFamily": "SF Mono",
-    "editor.fontSize": 16, 
-    "terminal.integrated.fontFamily": "SF Mono",
-    "terminal.integrated.fontSize": 12,
+  // Font
+  "editor.fontFamily": "SF Mono",
+  "editor.fontSize": 16,
+  "terminal.integrated.fontFamily": "SF Mono",
+  "terminal.integrated.fontSize": 12,
 
-    // Cursor
-    "editor.cursorStyle": "block",
-    "vim.cursorStylePerMode.insert": "block",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.replace": "block",
-    "vim.cursorStylePerMode.visual": "block",
-    "vim.cursorStylePerMode.visualblock": "block",
-    "vim.cursorStylePerMode.visualline": "block",
-    "editor.cursorBlinking": "solid",
-    "editor.cursorSmoothCaretAnimation": "on",
+  // Theme
+  "workbench.colorTheme": "GitHub Light",
+  "workbench.iconTheme": "vscode-icons",
 
-    // Vim (settings)
-    // For <space> leader key to work properly on Mac OS "Add full stop with double-space" needs to be disabled
-    "vim.leader": " ",
-    "vim.ignorecase": true,
-    "vim.hlsearch": true,
+  // Cursor
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
 
-    // Vim (auto switch input method)
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/Users/waterframe/.local/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/Users/waterframe/.local/bin/im-select {im}",
+  // Etc
+  "editor.tabSize": 4,
 
-    // Vim (easymotion)
-    "vim.easymotion": true,
-    "vim.easymotionDimBackground": true,
-    "vim.easymotionMarkerFontWeight": "bold",
-    "vim.easymotionDimColor": "#ffffff",
-    "vim.easymotionMarkerForegroundColorOneChar": "#fb8500",
-    "vim.easymotionMarkerForegroundColorTwoCharFirst": "#fb8500",
-    "vim.easymotionMarkerForegroundColorTwoCharSecond": "#6449FF",
-    "vim.easymotionIncSearchForegroundColor": "#6449FF",
+  "[python]": {
+    "editor.formatOnType": false
+  },
 
-    // Vim (surround)
-    // y s <motion>   <desired>	  Add desired surround around text defined by <motion>
-    // d s <existing>	          Delete existing surround
-    // c s <existing> <desired>	  Change existing surround to desired
-    // S   <desired>	          Surround when in visual modes (surrounds full selection)
-    // Use (, { to add spaces. Use ), } instead for no space.
-    // Also works with HTML tags.
-    "vim.surround": true,
+  // UI
+  "window.titleBarStyle": "native",
+  "window.nativeTabs": true,
+  "workbench.startupEditor": "none",
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.lineNumbers": "off",
+  "git.confirmSync": false,
+  "vsicons.dontShowNewVersionMessage": true,
 
-    // Vim (sneak)
-    // s <char><char>	            Move forward to the first occurrence of <char><char>
-    // S <char><char>	            Move backward to the first occurrence of <char><char>
-    // ; to go to the next occurence
-    // <operator> z <char><char>	Perform <operator> forward to the first occurrence of <char><char>
-    // <operator> Z <char><char>	Perform <operator> backward to the first occurrence of <char><char>
-    "vim.sneak": true,
+  // JS
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.inlayHints.parameterNames.enabled": "all",
 
-    // Vim (Camel case motion)
-    // DISABLED, thinking about it...
-    "vim.camelCaseMotion.enable": false,
-
-    "vim.normalModeKeyBindings": [
-        // Emacs-style line start, end
-        {
-            "before":["<C-a>"],
-            "commands": [
-                "cursorLineStart",
-            ]
-        },
-        {
-            "before":["<C-e>"],
-            "commands": [
-                "cursorLineEnd",
-            ]
-        }
-    ],
-
-    "vim.insertModeKeyBindings": [
-        // Emacs-style line start, end
-        {
-            "before":["<C-a>"],
-            "commands": [
-                "cursorLineStart",
-            ]
-        },
-        {
-            "before":["<C-e>"],
-            "commands": [
-                "cursorLineEnd",
-            ]
-        }
-    ],
-
-    "vim.visualModeKeyBindings": [
-        // Repeatable indenting
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-
-    "[python]": {
-        "editor.formatOnType": true
-    },
-
-    // UI
-    "window.titleBarStyle": "native",
-    "window.nativeTabs": true,
-    "workbench.startupEditor": "none",
-    "workbench.activityBar.visible": false,
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
-    "editor.renderWhitespace": "none",
-    "editor.lineNumbers": "off",
-    "workbench.colorTheme": "GitHub Light",
-    "workbench.iconTheme": "chalice-icon-theme",
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.inlayHints.enabled": "off",
+  "editor.autoClosingOvertype": "always",
+  "editor.detectIndentation": false,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }
