@@ -1,22 +1,37 @@
 [
-  // Movement By Words
-  {
-    "key": "alt+f",
-    "command": "cursorWordEndRight"
-  },
-  {
-    "key": "alt+b",
-    "command": "cursorWordLeft"
-  },
-  // Selection By Words
-  {
-    "key": "alt+shift+b",
-    "command": "cursorWordLeftSelect"
-  },
-  {
-    "key": "alt+shift+f",
-    "command": "cursorWordEndRightSelect"
-  },
+  //   // Emacs
+  //   // Movement By Words
+  //   {
+  //     "key": "alt+f",
+  //     "command": "cursorWordEndRight"
+  //   },
+  //   {
+  //     "key": "alt+b",
+  //     "command": "cursorWordLeft"
+  //   },
+  //   // Selection By Words
+  //   {
+  //     "key": "alt+shift+b",
+  //     "command": "cursorWordLeftSelect"
+  //   },
+  //   {
+  //     "key": "alt+shift+f",
+  //     "command": "cursorWordEndRightSelect"
+  //   },
+  //   // Selection By Lines
+  //   {
+  //     "key": "ctrl+shift+n",
+  //     "command": "cursorDownSelect"
+  //   },
+  //   {
+  //     "key": "ctrl+shift+p",
+  //     "command": "cursorUpSelect"
+  //   },
+  //   // Delete word right
+  //   {
+  //     "key": "alt+d",
+  //     "command": "deleteWordRight"
+  //   },
   // Close editor
   {
     "key": "cmd+w",
@@ -39,12 +54,12 @@
   },
   // Previous editor
   {
-    "key": "cmd+p",
+    "key": "cmd+h",
     "command": "workbench.action.previousEditor"
   },
   // Next editor
   {
-    "key": "cmd+n",
+    "key": "cmd+l",
     "command": "workbench.action.nextEditor"
   },
   // Quick Open
@@ -52,14 +67,14 @@
     "key": "cmd+q",
     "command": "workbench.action.quickOpen"
   },
-  // Find
+  // Search
   {
-    "key": "cmd+f",
+    "key": "cmd+s",
     "command": "actions.find"
   },
-  // Find in all files
+  // Search in all files
   {
-    "key": "cmd+shift+f",
+    "key": "cmd+shift+s",
     "command": "workbench.view.search"
   },
   // Wrap in HTML tag
@@ -72,25 +87,19 @@
     "key": "cmd+e",
     "command": "editor.action.smartSelect.expand"
   },
-  // Trigger suggest
-  {
-    "key": "alt+space",
-    "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  // Save
-  {
-    "key": "cmd+s",
-    "command": "workbench.action.files.save"
-  },
   // toggle side Bar
   {
     "key": "cmd+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
-  // Dash
+  // Definition
   {
     "key": "cmd+d",
+    "command": "editor.action.revealDefinition"
+  },
+  // Dash
+  {
+    "key": "cmd+shift+d",
     "command": "extension.dash.specific"
   },
   // Git
@@ -108,14 +117,18 @@
     "key": "cmd+r",
     "command": "workbench.view.explorer"
   },
-  // Debug
-  {
-    "key": "cmd+shift+d",
-    "command": "workbench.view.debug"
-  },
   // Toggle Terminal
   {
     "key": "cmd+t",
     "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // Zen
+  {
+    "key": "cmd+k z",
+    "command": "-workbench.action.toggleZenMode"
+  },
+  {
+    "key": "cmd+m z",
+    "command": "workbench.action.toggleZenMode"
   }
 ]

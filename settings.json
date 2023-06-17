@@ -1,36 +1,31 @@
 {
   // Font
   "editor.fontFamily": "SF Mono",
-  "editor.fontSize": 16,
+  "editor.fontSize": 19,
   "terminal.integrated.fontFamily": "SF Mono",
   "terminal.integrated.fontSize": 12,
 
   // Theme
   "workbench.colorTheme": "GitHub Light",
-  "workbench.iconTheme": "vscode-icons",
-
-  // Cursor
-  "editor.cursorStyle": "line",
+  "workbench.iconTheme": "chalice-icon-theme",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
 
   // Etc
   "editor.tabSize": 4,
 
-  "[python]": {
-    "editor.formatOnType": false
-  },
-
   // UI
   "window.titleBarStyle": "native",
   "window.nativeTabs": true,
   "workbench.startupEditor": "none",
+  "editor.lineNumbers": "off",
   "workbench.activityBar.visible": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "editor.lineNumbers": "off",
   "git.confirmSync": false,
-  "vsicons.dontShowNewVersionMessage": true,
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.smoothScrolling": true,
 
   // JS
   "[javascript]": {
@@ -45,14 +40,73 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
+  // TS
   "typescript.inlayHints.parameterNames.enabled": "all",
+
+  // HTML and JSX
+  "editor.linkedEditing": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
 
   "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
-  "editor.inlayHints.enabled": "off",
   "editor.autoClosingOvertype": "always",
   "editor.detectIndentation": false,
-  "editor.quickSuggestions": {
-    "strings": "on"
-  }
+
+  // Diffs
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // Vim
+  "vim.leader": " ",
+  "vim.ignorecase": true,
+  "vim.incsearch": false,
+  "vim.hlsearch": true,
+  // Vim (camel case motion)
+  "vim.camelCaseMotion.enable": true,
+  // Vim (auto switch input method)
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/Users/snowdrop/.local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/Users/snowdrop/.local/bin/im-select {im}",
+  // Vim (repeatable indenting)
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  // Vim (easymotion)
+  "vim.easymotion": true,
+  "vim.easymotionDimBackground": true,
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.easymotionDimColor": "#ffffff",
+  "vim.easymotionMarkerForegroundColorOneChar": "#fb8500",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#fb8500",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#6449FF",
+  "vim.easymotionIncSearchForegroundColor": "#6449FF",
+  // Vim (surround)
+  // y s <motion>   <desired>	  Add desired surround around text defined by <motion>
+  // d s <existing>	          Delete existing surround
+  // c s <existing> <desired>	  Change existing surround to desired
+  // S   <desired>	          Surround when in visual modes (surrounds full selection)
+  // Use (, { to add spaces. Use ), } instead for no space.
+  // Also works with HTML tags.
+  "vim.surround": true,
+
+  // Vim (sneak)
+  // s <char><char>	            Move forward to the first occurrence of <char><char>
+  // S <char><char>	            Move backward to the first occurrence of <char><char>
+  // ; to go to the next occurence
+  // <operator> z <char><char>	Perform <operator> forward to the first occurrence of <char><char>
+  // <operator> Z <char><char>	Perform <operator> backward to the first occurrence of <char><char>
+  "vim.sneak": true,
+
+  // Junk
+  "vsicons.dontShowNewVersionMessage": true
 }
