@@ -1,42 +1,38 @@
 [
-  //   // Emacs
-  //   // Movement By Words
-  //   {
-  //     "key": "alt+f",
-  //     "command": "cursorWordEndRight"
-  //   },
-  //   {
-  //     "key": "alt+b",
-  //     "command": "cursorWordLeft"
-  //   },
-  //   // Selection By Words
-  //   {
-  //     "key": "alt+shift+b",
-  //     "command": "cursorWordLeftSelect"
-  //   },
-  //   {
-  //     "key": "alt+shift+f",
-  //     "command": "cursorWordEndRightSelect"
-  //   },
-  //   // Selection By Lines
-  //   {
-  //     "key": "ctrl+shift+n",
-  //     "command": "cursorDownSelect"
-  //   },
-  //   {
-  //     "key": "ctrl+shift+p",
-  //     "command": "cursorUpSelect"
-  //   },
-  //   // Delete word right
-  //   {
-  //     "key": "alt+d",
-  //     "command": "deleteWordRight"
-  //   },
-  // Close editor
+  // Movement By Words
   {
-    "key": "cmd+w",
-    "command": "workbench.action.closeActiveEditor"
+    "key": "alt+f",
+    "command": "cursorWordEndRight"
   },
+  {
+    "key": "alt+b",
+    "command": "cursorWordLeft"
+  },
+  // Selection By Words
+  {
+    "key": "alt+shift+b",
+    "command": "cursorWordLeftSelect"
+  },
+  {
+    "key": "alt+shift+f",
+    "command": "cursorWordEndRightSelect"
+  },
+  // Selection By Lines
+  {
+    "key": "ctrl+shift+n",
+    "command": "cursorDownSelect"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "cursorUpSelect"
+  },
+  // Delete word right
+  {
+    "key": "alt+d",
+    "command": "deleteWordRight"
+  },
+  // Close editor
+  // Free The Keys
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeWindow",
@@ -52,14 +48,20 @@
     "command": "-workbench.action.terminal.killEditor",
     "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
   },
+  // The Keys
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // Tab switching with Ctrl-tab / Ctrl-Shift-Tab (browser-style)
   // Previous editor
   {
-    "key": "cmd+h",
+    "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
   },
   // Next editor
   {
-    "key": "cmd+l",
+    "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
   },
   // Quick Open
@@ -67,14 +69,14 @@
     "key": "cmd+q",
     "command": "workbench.action.quickOpen"
   },
-  // Search
+  // Find
   {
-    "key": "cmd+s",
+    "key": "cmd+f",
     "command": "actions.find"
   },
-  // Search in all files
+  // Find in all files
   {
-    "key": "cmd+shift+s",
+    "key": "cmd+shift+f",
     "command": "workbench.view.search"
   },
   // Wrap in HTML tag
@@ -86,6 +88,21 @@
   {
     "key": "cmd+e",
     "command": "editor.action.smartSelect.expand"
+  },
+  {
+    "key": "cmd+j",
+    "command": "jump-extension.jump-to-the-start-of-a-word"
+  },
+  // Trigger suggest
+  {
+    "key": "alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  // Save
+  {
+    "key": "cmd+s",
+    "command": "workbench.action.files.save"
   },
   // toggle side Bar
   {
@@ -130,5 +147,71 @@
   {
     "key": "cmd+m z",
     "command": "workbench.action.toggleZenMode"
+  },
+  // Find in all files (movement with Cmd-p / Cmd-n) BEGIN
+  // Free The Keys
+  {
+    "key": "cmd+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-search.focus.previousInputBox",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-search.focus.nextInputBox",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-search.action.focusSearchFromResults",
+    "when": "accessibilityModeEnabled && searchViewletVisible || firstMatchFocus && searchViewletVisible"
+  },
+  // The Keys
+  {
+    "key": "cmd+n",
+    "command": "search.focus.nextInputBox",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "cmd+p",
+    "command": "search.focus.previousInputBox",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+  },
+  {
+    "key": "cmd+p",
+    "command": "search.action.focusSearchFromResults",
+    "when": "accessibilityModeEnabled && searchViewletVisible || firstMatchFocus && searchViewletVisible"
+  },
+  // Find in all files (movement with Cmd-p / Cmd-n) END
+  // Breadcrumbs BEGIN
+  // Free The Keys
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "shift+cmd+.",
+    "command": "-breadcrumbs.focusAndSelect",
+    "when": "breadcrumbsPossible && breadcrumbsVisible"
+  },
+  // The Keys
+  {
+    "key": "shift+cmd+b",
+    "command": "breadcrumbs.focusAndSelect",
+    "when": "breadcrumbsPossible && breadcrumbsVisible"
   }
+  // Breadcrumbs END
 ]
